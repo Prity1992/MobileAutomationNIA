@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.DetailedTravelEntity" table="DetailedTravelEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="ConfigExcludingUSA" column="ConfigExcludingUSA" type="boolean" />
+			<property name="ConfigIncludingUSA" column="ConfigIncludingUSA" type="boolean" />
+			<property name="ConfigTravelPurpose" column="ConfigTravelPurpose" type="boolean" />
+			<property name="PurposeType" column="PurposeType" type="string" />
+			<property name="ConfigPlanType" column="ConfigPlanType" type="boolean" />
+			<property name="TypeOfPlan" column="TypeOfPlan" type="string" />
+			<property name="ConfigHoliday" column="ConfigHoliday" type="boolean" />
+			<property name="ConfigTravelDetails" column="ConfigTravelDetails" type="boolean" />
+			<property name="ConfigLeavingIndiaOn" column="ConfigLeavingIndiaOn" type="boolean" />
+			<property name="LeavingIndiaOn" column="LeavingIndiaOn" type="string" />
+			<property name="ConfigReturningToIndiOn" column="ConfigReturningToIndiOn" type="boolean" />
+			<property name="ReturningToIndiOn" column="ReturningToIndiOn" type="string" />
+			<property name="ConfigDateOfBirth" column="ConfigDateOfBirth" type="boolean" />
+			<property name="DateOfBirth" column="DateOfBirth" type="string" />
+			<property name="ConfigATwoRadioButton" column="ConfigATwoRadioButton" type="boolean" />
+			<property name="ConfigAOneRadioButton" column="ConfigAOneRadioButton" type="boolean" />
+			<property name="ConfigCalculatePremium" column="ConfigCalculatePremium" type="boolean" />
+			<property name="ConfigSaveAndContinue" column="ConfigSaveAndContinue" type="boolean" />
+			<property name="ConfigJwellaryandValuables" column="ConfigJwellaryandValuables" type="boolean" />
+			<property name="ConfigJwellaryBroadDiscription" column="ConfigJwellaryBroadDiscription" type="boolean" />
+			<property name="JwellaryBroadDiscription" column="JwellaryBroadDiscription" type="string" />
+			<property name="ConfigJwellaryWeightVol" column="ConfigJwellaryWeightVol" type="boolean" />
+			<property name="JwellaryWeightVol" column="JwellaryWeightVol" type="string" />
+			<property name="ConfigJwellaryValue" column="ConfigJwellaryValue" type="boolean" />
+			<property name="JwellaryValue" column="JwellaryValue" type="string" />
+			<property name="ConfigDomesticApplainces" column="ConfigDomesticApplainces" type="boolean" />
+			<property name="ConfigDomesticMake" column="ConfigDomesticMake" type="boolean" />
+			<property name="DomesticMake" column="DomesticMake" type="string" />
+			<property name="ConfigDomesticModel" column="ConfigDomesticModel" type="boolean" />
+			<property name="DomesticModel" column="DomesticModel" type="string" />
+			<property name="ConfigDomesticYear" column="ConfigDomesticYear" type="boolean" />
+			<property name="DomesticYear" column="DomesticYear" type="string" />
+			<property name="ConfigTelevision" column="ConfigTelevision" type="boolean" />
+			<property name="ConfigTelevisionMake" column="ConfigTelevisionMake" type="boolean" />
+			<property name="TelevisionMake" column="TelevisionMake" type="string" />
+			<property name="ConfigTelevisionModel" column="ConfigTelevisionModel" type="boolean" />
+			<property name="TelevisionModel" column="TelevisionModel" type="string" />
+			<property name="ConfigTelevisionYear" column="ConfigTelevisionYear" type="boolean" />
+			<property name="TelevisionYear" column="TelevisionYear" type="string" />
+			<property name="ConfigRecalculatePremium" column="ConfigRecalculatePremium" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

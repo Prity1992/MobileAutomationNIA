@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PersonalAccidentDetEntity" table="PersonalAccidentDetEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="ConfigCoverageRequiredFor" column="ConfigCoverageRequiredFor" type="boolean" />
+			<property name="CoverageRequiredFor" column="CoverageRequiredFor" type="string" />
+			<property name="ConfigNoOfChildren" column="ConfigNoOfChildren" type="boolean" />
+			<property name="NoOfChildren" column="NoOfChildren" type="string" />
+			<property name="ConfigDateOfBirth" column="ConfigDateOfBirth" type="boolean" />
+			<property name="DateOfBirth" column="DateOfBirth" type="string" />
+			<property name="ConfigGrossMonthlyIncome" column="ConfigGrossMonthlyIncome" type="boolean" />
+			<property name="GrossMonthlyIncome" column="GrossMonthlyIncome" type="string" />
+			<property name="ConfigOccupation" column="ConfigOccupation" type="boolean" />
+			<property name="Occupation" column="Occupation" type="string" />
+			<property name="ConfigRequiredSumInsuredForself" column="ConfigRequiredSumInsuredForself" type="boolean" />
+			<property name="RequiredSumInsuredForSelf" column="RequiredSumInsuredForSelf" type="string" />
+			<property name="ConfigMobileNo" column="ConfigMobileNo" type="boolean" />
+			<property name="MobileNo" column="MobileNo" type="string" />
+			<property name="ConfigEmailID" column="ConfigEmailID" type="boolean" />
+			<property name="EmailID" column="EmailID" type="string" />
+			<property name="ConfigKnowYourPremium" column="ConfigKnowYourPremium" type="boolean" />
+			<property name="ConfigReCalculatePremium" column="ConfigReCalculatePremium" type="boolean" />
+			<property name="ConfigBuyOnline" column="ConfigBuyOnline" type="boolean" />
+			<property name="ConfigSumInsuredInformation" column="ConfigSumInsuredInformation" type="boolean" />
+			<property name="ConfigChildDOB" column="ConfigChildDOB" type="boolean" />
+			<property name="ChildDOb" column="ChildDOb" type="string" />
+			<property name="ConfigAdditionalCoverageLink" column="ConfigAdditionalCoverageLink" type="boolean" />
+			<property name="ConfigYesRadioButton" column="ConfigYesRadioButton" type="boolean" />
+			<property name="ConfigNoRadioButton" column="ConfigNoRadioButton" type="boolean" />
+			<property name="ConfigRecalPremium" column="ConfigRecalPremium" type="boolean" />
+			<property name="ConfigSaveAndcontinue" column="ConfigSaveAndcontinue" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

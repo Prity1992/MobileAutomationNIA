@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.AdtionalDetalsInterEntity" table="AdtionalDetalsInterEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="ConfigboardDescriptionjewelleryTextBox" column="ConfigboardDescriptionjewelleryTextBox" type="boolean" />
+			<property name="boardDescriptionjewelleryTextBox" column="boardDescriptionjewelleryTextBox" type="string" />
+			<property name="ConfigweightVolforjewelleryTextBox" column="ConfigweightVolforjewelleryTextBox" type="boolean" />
+			<property name="weightVolforjewelleryTextBox" column="weightVolforjewelleryTextBox" type="string" />
+			<property name="ConfigenterValuejewellerytextBox" column="ConfigenterValuejewellerytextBox" type="boolean" />
+			<property name="enterValuejewellerytextBox" column="enterValuejewellerytextBox" type="string" />
+			<property name="ConfigMakeAddapplienceTextBox" column="ConfigMakeAddapplienceTextBox" type="boolean" />
+			<property name="MakeAddapplienceTextBox" column="MakeAddapplienceTextBox" type="string" />
+			<property name="ConfigmodelapplienceTextBox" column="ConfigmodelapplienceTextBox" type="boolean" />
+			<property name="modelapplienceTextBox" column="modelapplienceTextBox" type="string" />
+			<property name="ConfigyearlapplienceTextBox" column="ConfigyearlapplienceTextBox" type="boolean" />
+			<property name="yearlapplienceTextBox" column="yearlapplienceTextBox" type="string" />
+			<property name="ConfigmaketvDesktopTextBox" column="ConfigmaketvDesktopTextBox" type="boolean" />
+			<property name="maketvDesktopTextBox" column="maketvDesktopTextBox" type="string" />
+			<property name="ConfigmodeltvDesktop" column="ConfigmodeltvDesktop" type="boolean" />
+			<property name="modetvDesktop" column="modetvDesktop" type="string" />
+			<property name="ConfigyearTvDesktopTextBox" column="ConfigyearTvDesktopTextBox" type="boolean" />
+			<property name="yearTvDesktopTextBox" column="yearTvDesktopTextBox" type="string" />
+			<property name="ConfigNextButton1" column="ConfigNextButton1" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

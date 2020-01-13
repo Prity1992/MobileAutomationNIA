@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.TwoWheelerBuyInsuranceEntity" table="TwoWheelerBuyInsuranceEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="ConfigMake" column="ConfigMake" type="boolean" />
+			<property name="Make" column="Make" type="string" />
+			<property name="ConfigVehicleModel" column="ConfigVehicleModel" type="boolean" />
+			<property name="VehicleModel" column="VehicleModel" type="string" />
+			<property name="ConfigNearestCityOfPurchase" column="ConfigNearestCityOfPurchase" type="boolean" />
+			<property name="NearestCityOfPurchase" column="NearestCityOfPurchase" type="string" />
+			<property name="ConfigInsuredDeclaredValue" column="ConfigInsuredDeclaredValue" type="boolean" />
+			<property name="InsuredDeclaredValue" column="InsuredDeclaredValue" type="string" />
+			<property name="ConfigMobilenumber" column="ConfigMobilenumber" type="boolean" />
+			<property name="Mobilenumber" column="Mobilenumber" type="string" />
+			<property name="ConfigEmailId" column="ConfigEmailId" type="boolean" />
+			<property name="EmailId" column="EmailId" type="string" />
+			<property name="ConfigQuickQuote" column="ConfigQuickQuote" type="boolean" />
+			<property name="QuickQuote" column="QuickQuote" type="string" />
+			<property name="ConfigIAgree" column="ConfigIAgree" type="boolean" />
+			<property name="ConfigKnowYourPremium" column="ConfigKnowYourPremium" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

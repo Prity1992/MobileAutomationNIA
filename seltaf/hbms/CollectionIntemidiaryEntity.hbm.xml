@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.CollectionIntemidiaryEntity" table="CollectionIntemidiaryEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="ConfigCollectionModeTExt" column="ConfigCollectionModeTExt" type="boolean" />
+			<property name="ConfigCashText" column="ConfigCashText" type="boolean" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="policyNumber" column="policyNumber" type="string" />
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="PolicyNo" column="PolicyNo" type="string" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigCollectionNo" column="ConfigCollectionNo" type="boolean" />
+			<property name="CollectionNo" column="CollectionNo" type="string" />
+			<property name="ConfigPaymentSuccessful" column="ConfigPaymentSuccessful" type="boolean" />
+			<property name="PaymentSuccessful" column="PaymentSuccessful" type="string" />
+			<property name="ConfigQuoteNoHealth" column="ConfigQuoteNoHealth" type="boolean" />
+			<property name="ConfigCollectionAmountTextField" column="ConfigCollectionAmountTextField" type="boolean" />
+			<property name="CollectionAmount" column="CollectionAmount" type="string" />
+			<property name="ConfigCollectPremiumButton" column="ConfigCollectPremiumButton" type="boolean" />
+			<property name="ConfigOK" column="ConfigOK" type="boolean" />
+			<property name="ConfigCollectionMode" column="ConfigCollectionMode" type="boolean" />
+			<property name="CollectionMode" column="CollectionMode" type="string" />
+			<property name="ConfigChequeText" column="ConfigChequeText" type="boolean" />
+			<property name="ConfigDraftText" column="ConfigDraftText" type="boolean" />
+			<property name="ConfigNetBankingText" column="ConfigNetBankingText" type="boolean" />
+			<property name="ConfigPostalOrderText" column="ConfigPostalOrderText" type="boolean" />
+			<property name="ConfigPoType" column="ConfigPoType" type="boolean" />
+			<property name="ConfigPoNo" column="ConfigPoNo" type="boolean" />
+			<property name="PoNo" column="PoNo" type="string" />
+			<property name="ConfigPoDate" column="ConfigPoDate" type="boolean" />
+			<property name="PoDate" column="PoDate" type="string" />
+			<property name="ConfigDraweeBankName" column="ConfigDraweeBankName" type="boolean" />
+			<property name="DraweeBankName" column="DraweeBankName" type="string" />
+			<property name="ConfigDraweeBankBranch" column="ConfigDraweeBankBranch" type="boolean" />
+			<property name="DraweeBankBranch" column="DraweeBankBranch" type="string" />
+			<property name="ConfigCollectionAmountCheque" column="ConfigCollectionAmountCheque" type="boolean" />
+			<property name="CollectionAmountCheque" column="CollectionAmountCheque" type="string" />
+			<property name="ConfigPotypeHealth3" column="ConfigPotypeHealth3" type="boolean" />
+			<property name="ConfigPoNoHelth3" column="ConfigPoNoHelth3" type="boolean" />
+			<property name="ConfigPoDateHealth3" column="ConfigPoDateHealth3" type="boolean" />
+			<property name="ConfigDraweeHealth3BankName" column="ConfigDraweeHealth3BankName" type="boolean" />
+			<property name="ConfigDraweeBankHealth3Branch" column="ConfigDraweeBankHealth3Branch" type="boolean" />
+			<property name="ConfigHealth3CollectionAmountCheque" column="ConfigHealth3CollectionAmountCheque" type="boolean" />
+			<property name="ConfigBankSearchRenewal" column="ConfigBankSearchRenewal" type="boolean" />
+			<property name="BankSearchRenewal" column="BankSearchRenewal" type="string" />
+			<property name="ConfigTransactionRenewal" column="ConfigTransactionRenewal" type="boolean" />
+			<property name="TransactionRenewal" column="TransactionRenewal" type="string" />
+			<property name="ConfigPolicyNoRenewal" column="ConfigPolicyNoRenewal" type="boolean" />
+			<property name="PolicyNoRenewal" column="PolicyNoRenewal" type="string" />
+			<property name="ConfigPolicyNameRenewal" column="ConfigPolicyNameRenewal" type="boolean" />
+			<property name="PolicyNameRenewal" column="PolicyNameRenewal" type="string" />
+			<property name="ConfigPolicyHolder" column="ConfigPolicyHolder" type="boolean" />
+			<property name="PolicyHolder" column="PolicyHolder" type="string" />
+			<property name="ConfigPremiumRenewal" column="ConfigPremiumRenewal" type="boolean" />
+			<property name="PremiumRenewal" column="PremiumRenewal" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.TopUpMediEntity" table="TopUpMediEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="Product" column="Product" type="string" />
+			<property name="DependencyForQuoteNo" column="DependencyForQuoteNo" type="string" />
+			<property name="ConfigBasicInformation" column="ConfigBasicInformation" type="boolean" />
+			<property name="ConfigFloater" column="ConfigFloater" type="boolean" />
+			<property name="ConfigThresholdLimit" column="ConfigThresholdLimit" type="boolean" />
+			<property name="ThresholdLimit" column="ThresholdLimit" type="string" />
+			<property name="ConfigSumInsured" column="ConfigSumInsured" type="boolean" />
+			<property name="SumInsured" column="SumInsured" type="string" />
+			<property name="ConfigMemberInformation" column="ConfigMemberInformation" type="boolean" />
+			<property name="ConfigFirstMemberDOB" column="ConfigFirstMemberDOB" type="boolean" />
+			<property name="FirstMemberDOB" column="FirstMemberDOB" type="string" />
+			<property name="ConfigSecondtMemberDOB" column="ConfigSecondtMemberDOB" type="boolean" />
+			<property name="SecondtMemberDOB" column="SecondtMemberDOB" type="string" />
+			<property name="ConfigIndividual" column="ConfigIndividual" type="boolean" />
+			<property name="ConfigQuoteNumber" column="ConfigQuoteNumber" type="boolean" />
+			<property name="QuoteNumber" column="QuoteNumber" type="string" />
+			<property name="ConfigEstimatedPremium" column="ConfigEstimatedPremium" type="boolean" />
+			<property name="EstimatedPremium" column="EstimatedPremium" type="string" />
+			<property name="ConfigNoOfMembers" column="ConfigNoOfMembers" type="boolean" />
+			<property name="NoOfMembers" column="NoOfMembers" type="string" />
+			<property name="ConfigTermsAndConditions" column="ConfigTermsAndConditions" type="boolean" />
+			<property name="ConfigCalculatePremium" column="ConfigCalculatePremium" type="boolean" />
+			<property name="ConfigSaveAndContinue" column="ConfigSaveAndContinue" type="boolean" />
+			<property name="ConfigViewBreakUp" column="ConfigViewBreakUp" type="boolean" />
+			<property name="ConfigCityOfResidence" column="ConfigCityOfResidence" type="boolean" />
+			<property name="CityOfResidence" column="CityOfResidence" type="string" />
+			<property name="ConfigDependencyType" column="ConfigDependencyType" type="boolean" />
+			<property name="DependencyType" column="DependencyType" type="string" />
+			<property name="ConfigTypeOfCover" column="ConfigTypeOfCover" type="boolean" />
+			<property name="Height" column="Height" type="string" />
+			<property name="Weight" column="Weight" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

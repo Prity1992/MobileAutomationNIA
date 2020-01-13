@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.TwoWheelerDetailsEntity" table="TwoWheelerDetailsEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="ConfigYearOfManufacture" column="ConfigYearOfManufacture" type="boolean" />
+			<property name="YearOfManufacture" column="YearOfManufacture" type="string" />
+			<property name="ConfigEngineNumber" column="ConfigEngineNumber" type="boolean" />
+			<property name="EngineNumber" column="EngineNumber" type="string" />
+			<property name="ConfigChassisNumber" column="ConfigChassisNumber" type="boolean" />
+			<property name="ChassisNumber" column="ChassisNumber" type="string" />
+			<property name="ConfigColorAsPerRCBook" column="ConfigColorAsPerRCBook" type="boolean" />
+			<property name="ColorAsPerRCBook" column="ColorAsPerRCBook" type="string" />
+			<property name="ConfigVehicleZoneFortwoWheeler" column="ConfigVehicleZoneFortwoWheeler" type="boolean" />
+			<property name="VehicleZoneFortwoWheeler" column="VehicleZoneFortwoWheeler" type="string" />
+			<property name="ConfigTypeOfFuel" column="ConfigTypeOfFuel" type="boolean" />
+			<property name="TypeOfFuel" column="TypeOfFuel" type="string" />
+			<property name="ConfigCity" column="ConfigCity" type="boolean" />
+			<property name="City" column="City" type="string" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigRightArrow" column="ConfigRightArrow" type="boolean" />
+			<property name="ConfigIagree" column="ConfigIagree" type="boolean" />
+			<property name="ConfigSaveAndCalculatePremium" column="ConfigSaveAndCalculatePremium" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

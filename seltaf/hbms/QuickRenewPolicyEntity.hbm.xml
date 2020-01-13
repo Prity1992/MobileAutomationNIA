@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.QuickRenewPolicyEntity" table="QuickRenewPolicyEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="ConfigOldPolicyNo" column="ConfigOldPolicyNo" type="boolean" />
+			<property name="OldPolicyNo" column="OldPolicyNo" type="string" />
+			<property name="ConfigPolicyStatus" column="ConfigPolicyStatus" type="boolean" />
+			<property name="PolicyStatus" column="PolicyStatus" type="string" />
+			<property name="ConfigQuoteStatus" column="ConfigQuoteStatus" type="boolean" />
+			<property name="QuoteStatus" column="QuoteStatus" type="string" />
+			<property name="ConfigPendingForRenewals" column="ConfigPendingForRenewals" type="boolean" />
+			<property name="RenewalDate" column="RenewalDate" type="string" />
+			<property name="ConfigGetDetails" column="ConfigGetDetails" type="boolean" />
+			<property name="ConfigStateTextBox" column="ConfigStateTextBox" type="boolean" />
+			<property name="State" column="State" type="string" />
+			<property name="ConfigpincodeTextBox" column="ConfigpincodeTextBox" type="boolean" />
+			<property name="pin" column="pin" type="string" />
+			<property name="ConfigProceedToPay" column="ConfigProceedToPay" type="boolean" />
+			<property name="ConfigGrihaSuvidha" column="ConfigGrihaSuvidha" type="boolean" />
+			<property name="ConfigApproved" column="ConfigApproved" type="boolean" />
+			<property name="ConfiNewIndiaTopUp" column="ConfiNewIndiaTopUp" type="boolean" />
+			<property name="ConfigTwoWheeler" column="ConfigTwoWheeler" type="boolean" />
+			<property name="ConfigRenewPolicy" column="ConfigRenewPolicy" type="boolean" />
+			<property name="RenewPolicy" column="RenewPolicy" type="string" />
+			<property name="ConfigSeniorCitizenMediclaim" column="ConfigSeniorCitizenMediclaim" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

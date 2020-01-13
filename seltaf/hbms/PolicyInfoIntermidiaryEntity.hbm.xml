@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolicyInfoIntermidiaryEntity" table="PolicyInfoIntermidiaryEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="ConfigFirstNameTextBox" column="ConfigFirstNameTextBox" type="boolean" />
+			<property name="FirstNameTextBox" column="FirstNameTextBox" type="string" />
+			<property name="ConfigMiddleNameTextBox" column="ConfigMiddleNameTextBox" type="boolean" />
+			<property name="MiddleNameTextBox" column="MiddleNameTextBox" type="string" />
+			<property name="ConfigLastNameTextBox" column="ConfigLastNameTextBox" type="boolean" />
+			<property name="lastNameTextBox" column="lastNameTextBox" type="string" />
+			<property name="ConfigGenderMaleRadioButton" column="ConfigGenderMaleRadioButton" type="boolean" />
+			<property name="ConfigDateOfBirthTExtBox" column="ConfigDateOfBirthTExtBox" type="boolean" />
+			<property name="ConfigStateTextBox" column="ConfigStateTextBox" type="boolean" />
+			<property name="State" column="State" type="string" />
+			<property name="ConfigBuildingnoStreetTextBox" column="ConfigBuildingnoStreetTextBox" type="boolean" />
+			<property name="BuildingnoStreetTextBo" column="BuildingnoStreetTextBo" type="string" />
+			<property name="ConfigGstRegestrationIDDropDown" column="ConfigGstRegestrationIDDropDown" type="boolean" />
+			<property name="GstRegestrationIDDropDown" column="GstRegestrationIDDropDown" type="string" />
+			<property name="ConfigGstIntextbox" column="ConfigGstIntextbox" type="boolean" />
+			<property name="GstIntextbox" column="GstIntextbox" type="string" />
+			<property name="pin" column="pin" type="string" />
+			<property name="ConfigMobileNumberTextBox" column="ConfigMobileNumberTextBox" type="boolean" />
+			<property name="MobileNumberTextBox" column="MobileNumberTextBox" type="string" />
+			<property name="StateFull" column="StateFull" type="string" />
+			<property name="pinFull" column="pinFull" type="string" />
+			<property name="ConfigpincodeTextBox" column="ConfigpincodeTextBox" type="boolean" />
+			<property name="ConfigCreateButton" column="ConfigCreateButton" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="Configpartycode" column="Configpartycode" type="boolean" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+			<property name="ConfigProceed" column="ConfigProceed" type="boolean" />
+			<property name="ConfigEdit" column="ConfigEdit" type="boolean" />
+			<property name="ConfigRelations" column="ConfigRelations" type="boolean" />
+			<property name="ConfigAgentRequired" column="ConfigAgentRequired" type="boolean" />
+			<property name="ConfigAgentNotRequired" column="ConfigAgentNotRequired" type="boolean" />
+			<property name="ConfigProposer" column="ConfigProposer" type="boolean" />
+			<property name="ConfigProposerName" column="ConfigProposerName" type="boolean" />
+			<property name="ConfigProposerOccupation" column="ConfigProposerOccupation" type="boolean" />
+			<property name="ProposerOccupation" column="ProposerOccupation" type="string" />
+			<property name="ConfigSpouse" column="ConfigSpouse" type="boolean" />
+			<property name="ConfigNomineeName" column="ConfigNomineeName" type="boolean" />
+			<property name="NomineeName" column="NomineeName" type="string" />
+			<property name="ConfigNomineeOccupation" column="ConfigNomineeOccupation" type="boolean" />
+			<property name="NomineeOccupation" column="NomineeOccupation" type="string" />
+			<property name="ConfigIndividual" column="ConfigIndividual" type="boolean" />
+			<property name="ConfigNextButtonHM" column="ConfigNextButtonHM" type="boolean" />
+			<property name="ConfigDateOfBirthMotor" column="ConfigDateOfBirthMotor" type="boolean" />
+			<property name="Month" column="Month" type="string" />
+			<property name="Year" column="Year" type="string" />
+			<property name="ConfigProposerHeight" column="ConfigProposerHeight" type="boolean" />
+			<property name="ProposerHeight" column="ProposerHeight" type="string" />
+			<property name="ConfigProposerWeight" column="ConfigProposerWeight" type="boolean" />
+			<property name="ProposerWeight" column="ProposerWeight" type="string" />
+			<property name="ConfigProposerNatureOfId" column="ConfigProposerNatureOfId" type="boolean" />
+			<property name="ProposerNatureOfId" column="ProposerNatureOfId" type="string" />
+			<property name="ConfigProposerId" column="ConfigProposerId" type="boolean" />
+			<property name="ProposerId" column="ProposerId" type="string" />
+			<property name="ConfigpincodeMotorTextBox" column="ConfigpincodeMotorTextBox" type="boolean" />
+			<property name="ConfigStateMotorTextBox" column="ConfigStateMotorTextBox" type="boolean" />
+			<property name="ConfigSaveAndCalculatePremium" column="ConfigSaveAndCalculatePremium" type="boolean" />
+			<property name="ConfigSpouseName" column="ConfigSpouseName" type="boolean" />
+			<property name="ProposerName" column="ProposerName" type="string" />
+			<property name="ConfigHEalthOk" column="ConfigHEalthOk" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

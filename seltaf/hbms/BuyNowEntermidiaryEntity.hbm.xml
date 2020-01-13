@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.BuyNowEntermidiaryEntity" table="BuyNowEntermidiaryEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="ConfigMobileNumberTextBox" column="ConfigMobileNumberTextBox" type="boolean" />
+			<property name="MobileNumberTextBox" column="MobileNumberTextBox" type="string" />
+			<property name="ConfigSumInsuredDropDown" column="ConfigSumInsuredDropDown" type="boolean" />
+			<property name="SumInsured" column="SumInsured" type="string" />
+			<property name="ConfigEmailidTextBox" column="ConfigEmailidTextBox" type="boolean" />
+			<property name="EmailidTextBox" column="EmailidTextBox" type="string" />
+			<property name="Configoption1RadioButtoon" column="Configoption1RadioButtoon" type="boolean" />
+			<property name="ConfigIagreeCheckBox" column="ConfigIagreeCheckBox" type="boolean" />
+			<property name="ConfigCalculatePremiumButton" column="ConfigCalculatePremiumButton" type="boolean" />
+			<property name="ConfigProceedButton" column="ConfigProceedButton" type="boolean" />
+			<property name="ConfigKnowyourPremium" column="ConfigKnowyourPremium" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

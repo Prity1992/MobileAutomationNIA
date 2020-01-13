@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.VehicleDetailsIntmyEntity" table="VehicleDetailsIntmyEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="ConfigMake" column="ConfigMake" type="boolean" />
+			<property name="Make" column="Make" type="string" />
+			<property name="ConfigModel" column="ConfigModel" type="boolean" />
+			<property name="Model" column="Model" type="string" />
+			<property name="ConfigDateOfFirstPurchaser" column="ConfigDateOfFirstPurchaser" type="boolean" />
+			<property name="DateOfFirstPurchaser" column="DateOfFirstPurchaser" type="string" />
+			<property name="ConfigInsuredDeclaredValue" column="ConfigInsuredDeclaredValue" type="boolean" />
+			<property name="InsuredDeclaredValue" column="InsuredDeclaredValue" type="string" />
+			<property name="ConfigMobileNoTextField" column="ConfigMobileNoTextField" type="boolean" />
+			<property name="MobileNo" column="MobileNo" type="string" />
+			<property name="ConfigEmailId" column="ConfigEmailId" type="boolean" />
+			<property name="EmailId" column="EmailId" type="string" />
+			<property name="ConfigCalculatePremium" column="ConfigCalculatePremium" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.AdditionalDetailsMotorEntity" table="AdditionalDetailsMotorEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="ConfigAdditionalVehicleMaximize" column="ConfigAdditionalVehicleMaximize" type="boolean" />
+			<property name="ConfigEngineNo" column="ConfigEngineNo" type="boolean" />
+			<property name="EngineNo" column="EngineNo" type="string" />
+			<property name="ConfigChassisNo" column="ConfigChassisNo" type="boolean" />
+			<property name="ChassisNo" column="ChassisNo" type="string" />
+			<property name="ConfigColourOfVehicle" column="ConfigColourOfVehicle" type="boolean" />
+			<property name="ColourOfVehicle" column="ColourOfVehicle" type="string" />
+			<property name="ConfigColourAsPerRCBook" column="ConfigColourAsPerRCBook" type="boolean" />
+			<property name="ColourAsPerRCBook" column="ColourAsPerRCBook" type="string" />
+			<property name="ConfigPolicyExcess" column="ConfigPolicyExcess" type="boolean" />
+			<property name="PolicyExcess" column="PolicyExcess" type="string" />
+			<property name="ConfigPersonalDetailsMaximize" column="ConfigPersonalDetailsMaximize" type="boolean" />
+			<property name="ConfigRelationshipWithRegisteredUser" column="ConfigRelationshipWithRegisteredUser" type="boolean" />
+			<property name="RelationshipWithRegisteredUser" column="RelationshipWithRegisteredUser" type="string" />
+			<property name="ConfigFirstName" column="ConfigFirstName" type="boolean" />
+			<property name="FirstName" column="FirstName" type="string" />
+			<property name="ConfigLastName" column="ConfigLastName" type="boolean" />
+			<property name="LastName" column="LastName" type="string" />
+			<property name="ConfigMale" column="ConfigMale" type="boolean" />
+			<property name="ConfigFemale" column="ConfigFemale" type="boolean" />
+			<property name="ConfigDOB" column="ConfigDOB" type="boolean" />
+			<property name="DOB" column="DOB" type="string" />
+			<property name="ConfigBldgNoStreet" column="ConfigBldgNoStreet" type="boolean" />
+			<property name="BldgNoStreet" column="BldgNoStreet" type="string" />
+			<property name="ConfigState" column="ConfigState" type="boolean" />
+			<property name="State" column="State" type="string" />
+			<property name="ConfigPinCode" column="ConfigPinCode" type="boolean" />
+			<property name="PinCode" column="PinCode" type="string" />
+			<property name="ConfigCity" column="ConfigCity" type="boolean" />
+			<property name="City" column="City" type="string" />
+			<property name="ConfigMobileNo" column="ConfigMobileNo" type="boolean" />
+			<property name="MobileNo" column="MobileNo" type="string" />
+			<property name="ConfigEmailid" column="ConfigEmailid" type="boolean" />
+			<property name="Emailid" column="Emailid" type="string" />
+			<property name="ConfigAdharCardLinkYes" column="ConfigAdharCardLinkYes" type="boolean" />
+			<property name="ConfigAdharCardLinkNo" column="ConfigAdharCardLinkNo" type="boolean" />
+			<property name="ConfigIHereBy" column="ConfigIHereBy" type="boolean" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigEstimatedPremium" column="ConfigEstimatedPremium" type="boolean" />
+			<property name="EstimatedPremium" column="EstimatedPremium" type="string" />
+			<property name="ConfigTotalIDV" column="ConfigTotalIDV" type="boolean" />
+			<property name="TotalIDV" column="TotalIDV" type="string" />
+			<property name="ConfigSubmit" column="ConfigSubmit" type="boolean" />
+			<property name="ConfigSaveAndContinue" column="ConfigSaveAndContinue" type="boolean" />
+			<property name="ConfigSubmitQuote" column="ConfigSubmitQuote" type="boolean" />
+			<property name="ConfigOk" column="ConfigOk" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

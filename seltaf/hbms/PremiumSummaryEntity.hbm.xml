@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PremiumSummaryEntity" table="PremiumSummaryEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="ConfigPremiumSummary" column="ConfigPremiumSummary" type="boolean" />
+			<property name="PremiumSummary" column="PremiumSummary" type="string" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigEstimatedPremium" column="ConfigEstimatedPremium" type="boolean" />
+			<property name="EstimatedPremium" column="EstimatedPremium" type="string" />
+			<property name="ConfigTotalIDV" column="ConfigTotalIDV" type="boolean" />
+			<property name="TotalIDV" column="TotalIDV" type="string" />
+			<property name="ConfigEnhancementPremiumAmount" column="ConfigEnhancementPremiumAmount" type="boolean" />
+			<property name="ConfigPackagePremiumAmount" column="ConfigPackagePremiumAmount" type="boolean" />
+			<property name="ConfigLiabilityPremiumAmount" column="ConfigLiabilityPremiumAmount" type="boolean" />
+			<property name="ConfigBuyOnline" column="ConfigBuyOnline" type="boolean" />
+			<property name="ConfigvehicleDetails" column="ConfigvehicleDetails" type="boolean" />
+			<property name="ConfigVehicleZone" column="ConfigVehicleZone" type="boolean" />
+			<property name="VehicleZone" column="VehicleZone" type="string" />
+			<property name="ConfigCoverageDetails" column="ConfigCoverageDetails" type="boolean" />
+			<property name="ConfigBuyInsuranceForNewVehicle" column="ConfigBuyInsuranceForNewVehicle" type="boolean" />
+			<property name="ConfigRecalculatePremium" column="ConfigRecalculatePremium" type="boolean" />
+			<property name="ConfigSaveAndContinue" column="ConfigSaveAndContinue" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>
